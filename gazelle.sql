@@ -680,7 +680,7 @@ CREATE TABLE `donor_rewards`  (
   `ColorUsername` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `GradientsColor` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`UserID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for drives
@@ -2901,7 +2901,7 @@ CREATE TABLE `users_notify_filters`  (
   INDEX `UserID`(`UserID`) USING BTREE,
   INDEX `FromYear`(`FromYear`) USING BTREE,
   INDEX `ToYear`(`ToYear`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for users_notify_quoted

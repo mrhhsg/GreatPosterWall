@@ -13,8 +13,9 @@ services:
       - mysql
     volumes:
       - .:/var/www:delegated
-      - .docker/web/nginx.conf:/etc/nginx/sites-available/gazelle.conf
-      - .docker/web/www.conf:/etc/php/7.3/fpm/pool.d/www.conf
+      - .docker/web/php.ini:/etc/php/7.3/fpm/php.ini
+      - .docker/web/nginx.conf:/etc/nginx/nginx.conf
+      - .docker/web/gazelle.conf:/etc/nginx/sites-available/gazelle.conf
     environment:
       - ENV=development
       # These should match what you set for your mysql container below
@@ -51,7 +52,8 @@ services:
       - MYSQL_ROOT_PASSWORD=em%G9Lrey4^N
 
   sphinxsearch:
-    build: ./.docker/sphinxsearch
+    # build: ./.docker/sphinxsearch
+    image: registry.cn-chengdu.aliyuncs.com/gy1682005/gazelle_sphinx:v210317
     container_name: gpw-sphinxsearch
     depends_on:
       - mysql

@@ -73,4 +73,4 @@ if ($_POST['submit'] == 'Delete') { //Delete
 $Cache->delete_value('forums_list'); // Clear cache
 
 // Go back
-header('Location: tools.php?action=forum')
+header('Location: tools.php?action=forum');
